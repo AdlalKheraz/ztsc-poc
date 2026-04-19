@@ -1,0 +1,27 @@
+name: Pipeline ZTSC
+on: [push, workflow_dispatch]
+permissions:
+  id-token: write
+  contents: read
+  attestations: write
+jobs:
+  build-secure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install sans scripts postinstall
+        run: npm install --ignore-scripts
+      - name: Lancer les tests
+        run: node test/test.js
+      - name: Build du package
+        run: npm pack
+      - uses: sigstore/cosign-installer@v3
+      - name: Signer avec Sigstore
+        run: cosign sign-blob --yes *.tgz --output-signature=sig.txt
+      - name: Attestation de provenance
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: '*.tgz'
