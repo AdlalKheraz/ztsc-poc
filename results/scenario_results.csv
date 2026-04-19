@@ -1,0 +1,13 @@
+ID,Categorie,Description,Baseline,ZTSC
+S1,Typosquatting expres-js vs express,BLOCK,BLOCK
+S2,Typosquatting lodash-util vs lodash,BLOCK,BLOCK
+S3,Typosquatting reactt vs react,BLOCK,BLOCK
+S4,Dep confusion namespace interne,BLOCK,BLOCK
+S5,Version publique supérieure suspecte,BLOCK,BLOCK
+S6,Scope privé non protégé,BLOCK,BLOCK
+S7,Postinstall exfiltration env,BLOCK,BLOCK
+S8,Preinstall reverse shell,BLOCK,BLOCK
+S9,Prepare download binaire,BLOCK,BLOCK
+S10,PPE injection PR malveillante,BLOCK,BLOCK
+S11,Action non fixée sur SHA,BLOCK,BLOCK
+S12,Fichier JS suspect ajouté,BLOCK,BLOCK
