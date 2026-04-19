@@ -1,0 +1,13 @@
+{
+  "baseline_mean": 11.233333333333333,
+  "baseline_median": 10.5,
+  "baseline_std": 2.555363977493473,
+  "ztsc_mean": 16.3,
+  "ztsc_median": 16.0,
+  "ztsc_std": 3.76141939459946,
+  "overhead_mean_pct": 45.103857566765605,
+  "overhead_median_pct": 52.38095238095237,
+  "pvalue": 2.550711785066807e-07,
+  "n_baseline": 30,
+  "n_ztsc": 30
+}
